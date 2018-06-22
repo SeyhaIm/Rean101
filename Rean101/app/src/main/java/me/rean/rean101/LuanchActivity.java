@@ -27,8 +27,11 @@ public class LuanchActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
+
                 Intent i = new Intent(getApplicationContext(), MainDashboardActivity.class);
                 startActivity(i);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+
                 finish();
             }
         }, TIME_OUT);
